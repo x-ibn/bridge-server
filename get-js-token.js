@@ -1,7 +1,7 @@
 // api/get-js-token.js
 import crypto from "crypto";
 
-const SECRET = process.env.JS_TOKEN_SECRET || "ganti_dengan_secret_acak";
+const SECRET = process.env.JS_TOKEN_SECRET || "9f0a1b2c3d4e5f60718293a4b5c6d7e8f9012a3b4c5d6e7f8091a2b3c4d5e6f7";
 const TTL_MS = 5 * 60 * 1000; // token berlaku 5 menit
 
 // Simpan nonce sementara (reset kalau instance restart)
@@ -29,3 +29,4 @@ export default function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.status(200).send(token);
 }
+
